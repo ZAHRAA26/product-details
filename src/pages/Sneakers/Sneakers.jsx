@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Sneakers.css';
-
 export default function Sneakers(props) {
  
   const [noOfBuying, setNoOfBuying] = useState(0);
@@ -23,10 +22,10 @@ export default function Sneakers(props) {
 
 const addHandle=()=>{props.addToCart(product)}
   const images = [
-    '../../../public/images/image-product-1.jpg',
-    '../../../public/images/image-product-2.jpg',
-    '../../../public/images/image-product-3.jpg',
-    '../../../public/images/image-product-4.jpg'
+    '../../assets/images/image-product-1.jpg',
+    '../../assets/images/image-product-2.jpg',
+    '../../assets/images/image-product-3.jpg',
+    '../../assets/images/image-product-4.jpg'
   ];
 
  
@@ -123,7 +122,7 @@ const addHandle=()=>{props.addToCart(product)}
             <button onClick={increment}>+</button>
           </div>
           <div className='addToCartButton'>
-            <img src='../../../public/images/icon-cart.svg' alt='Cart Icon' />
+            <img src='../../assets/images/icon-cart.svg' alt='Cart Icon' />
             <button onClick={addHandle}>Add To Cart</button>
           </div>
         </div>
