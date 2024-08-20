@@ -22,10 +22,10 @@ export default function Sneakers(props) {
 
 const addHandle=()=>{props.addToCart(product)}
   const images = [
-    '../../assets/images/image-product-1.jpg',
-    '../../assets/images/image-product-2.jpg',
-    '../../assets/images/image-product-3.jpg',
-    '../../assets/images/image-product-4.jpg'
+    '/images/image-product-1.jpg',
+    '/images/image-product-2.jpg',
+    '/images/image-product-3.jpg',
+    '/images/image-product-4.jpg'
   ];
 
  
@@ -54,7 +54,7 @@ const addHandle=()=>{props.addToCart(product)}
   return (
     <div className='sneaker-container'>
       <div className='left-sneaker'>
-        <div className='d-none'>
+        <div  className='toggle'>
           <img
           className='bigImage'
           src={images[currentImageIndex]}
@@ -76,9 +76,10 @@ const addHandle=()=>{props.addToCart(product)}
         </div>
         
 
-        {carouselVisible && (
-          <div id='carousel' className='carousel'>
-            <span className='close' onClick={closeCarousel}>&times;</span>
+        
+          <div  className={carouselVisible ? 'carousel' : 'd-carousel'}>
+          <span className='close' onClick={closeCarousel}>&times;</span>
+          <div className='contrlersImage'>
             <img
               id='carousel-image'
               className='carousel-content'
@@ -89,6 +90,9 @@ const addHandle=()=>{props.addToCart(product)}
               <a className='prev' onClick={() => changeImage(-1)}>&#10094;</a>
               <a className='next' onClick={() => changeImage(1)}>&#10095;</a>
             </div>
+          </div>
+            
+            
             <div className='carousel-thumbnails'>
               {images.map((src, index) => (
                 <img
@@ -101,7 +105,7 @@ const addHandle=()=>{props.addToCart(product)}
               ))}
             </div>
           </div>
-        )}
+      
       </div>
 
       <div className='right-sneaker'>
@@ -122,7 +126,7 @@ const addHandle=()=>{props.addToCart(product)}
             <button onClick={increment}>+</button>
           </div>
           <div className='addToCartButton'>
-            <img src='../../assets/images/icon-cart.svg' alt='Cart Icon' />
+            <img src='/images/icon-cart.svg' alt='Cart Icon' />
             <button onClick={addHandle}>Add To Cart</button>
           </div>
         </div>

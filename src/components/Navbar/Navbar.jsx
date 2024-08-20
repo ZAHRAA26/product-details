@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
-import Bartoggle from '../../assets/images/icon-menu.svg';
-import closeicon from "../../assets/images/icon-close.svg";
-import logo from '../../assets/images/logo.svg'
+import Bartoggle from '/images/icon-menu.svg';
+import closeicon from "/images/icon-close.svg";
+import logo from '/images/logo.svg'
 export default function Navbar(props) {
   const { cartProducts } = props;
   const [showCart, setShowCart] = useState(false);
@@ -50,11 +50,11 @@ export default function Navbar(props) {
         </div>
         <div className="right-nav">
           <div className='cartImg' onClick={()=>{setShowCart(true)}}>
-            <img src={'../../assets/images/icon-cart.svg'} alt="Cart" />
+            <img src={'/images/icon-cart.svg'} alt="Cart" />
           {cartProducts.length > 0 && <div className='circle'><span>{cartProducts[0].noOfBuying}</span></div>}
           
           </div>
-          <img className="avatar" src={'../../assets/images/image-avatar.png'} alt="Avatar" />
+          <img className="avatar" src={'/images/image-avatar.png'} alt="Avatar" />
         </div>
       </div>
       <hr />
