@@ -23,10 +23,10 @@ export default function Sneakers(props) {
 
 const addHandle=()=>{props.addToCart(product)}
   const images = [
-    '../../../public/image-product-1.jpg',
-    '../../../public/image-product-2.jpg',
-    '../../../public/image-product-3.jpg',
-    '../../../public/image-product-4.jpg'
+    '../../../public/images/image-product-1.jpg',
+    '../../../public/images/image-product-2.jpg',
+    '../../../public/images/image-product-3.jpg',
+    '../../../public/images/image-product-4.jpg'
   ];
 
  
@@ -55,7 +55,8 @@ const addHandle=()=>{props.addToCart(product)}
   return (
     <div className='sneaker-container'>
       <div className='left-sneaker'>
-        <img
+        <div className='d-none'>
+          <img
           className='bigImage'
           src={images[currentImageIndex]}
           alt="Main Sneaker"
@@ -73,6 +74,8 @@ const addHandle=()=>{props.addToCart(product)}
             />
           ))}
         </div>
+        </div>
+        
 
         {carouselVisible && (
           <div id='carousel' className='carousel'>
@@ -120,7 +123,7 @@ const addHandle=()=>{props.addToCart(product)}
             <button onClick={increment}>+</button>
           </div>
           <div className='addToCartButton'>
-            <img src='../../../public/icon-cart.svg' alt='Cart Icon' />
+            <img src='../../../public/images/icon-cart.svg' alt='Cart Icon' />
             <button onClick={addHandle}>Add To Cart</button>
           </div>
         </div>
