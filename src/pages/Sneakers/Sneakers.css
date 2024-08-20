@@ -1,0 +1,275 @@
+.sneaker-container {
+    display: flex;
+    margin: 60px;
+    column-gap: 50px;
+    width: 80%;
+
+}
+
+.left-sneaker {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    width: 50%;
+}
+
+.bigImage {
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+.threeImages {
+    /* width: 20%; */
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+.smallImage {
+    border-radius: 10px;
+    width: 75px;
+    height: 75px;
+}
+
+.smallImage:active {
+    border: 2px solid hsl(26, 100%, 55%);
+    opacity: 0.75;
+
+}
+
+h4 {
+    text-transform: camel;
+    color: hsl(219, 9%, 45%);
+    letter-spacing: 1px;
+}
+
+.right-sneaker {
+    display: flex;
+    flex-direction: column;
+    row-gap: 23px;
+    width: 40%;
+    justify-content: center;
+}
+
+.right-sneaker p {
+    color: hsl(219, 9%, 45%)
+}
+
+.discound {
+    display: flex;
+    column-gap: 30px;
+}
+
+.buttonCountContainer {
+    display: flex;
+    column-gap: 12px;
+}
+
+.discound span {
+    background-color: black;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    width: 40px;
+    border-radius: 2px;
+}
+
+.through {
+    text-decoration: line-through;
+    color: hsl(219, 9%, 45%);
+    font-weight: bold;
+}
+
+.buttonCount {
+    display: flex;
+    background-color: hsl(223, 64%, 98%);
+    column-gap: 15px;
+    justify-content: center;
+    align-items: baseline;
+    width: 104px;
+    height: 25px;
+    padding: 10px 8px;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+.buttonCount button {
+    background-color: transparent;
+    color: hsl(26, 100%, 55%);
+    border: none;
+    font-size: 22px;
+}
+
+.buttonCount p {
+    color: black
+}
+
+.addToCartButton {
+    display: flex;
+    justify-content: center;
+    column-gap: 3px;
+    align-items: center;
+    width: 43%;
+    border-radius: 10px;
+    padding: 15px 40px;
+    background-color: hsl(26, 100%, 55%);
+    font-weight: bold;
+}
+
+.addToCartButton button {
+    border: none;
+    font-weight: bold;
+    background: transparent;
+}
+
+.addToCartButton img {
+    height: 14px;
+    color: black
+}
+
+/* Full-screen Carousel Background */
+.carousel {
+    position: fixed;
+    top: 0;
+    /* Aligns the top of the carousel with the top of the viewport */
+    left: 0;
+    /* Aligns the left of the carousel with the left of the viewport */
+    width: 100vw;
+    /* Full width of the viewport */
+    height: 100vh;
+    /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Dark background for focus */
+    padding: 20px;
+    z-index: 1000;
+    /* Ensure it appears above other content */
+    overflow: hidden;
+    /* Prevent scrollbars from appearing */
+}
+
+/* Carousel Image Styling */
+.carousel-content {
+    border-radius: 20px;
+    width: 80%;
+    /* Adjust width as needed */
+    max-width: 600px;
+    /* Set a maximum width */
+    height: auto;
+    object-fit: cover;
+    /* Ensure image fits within the container */
+    margin-bottom: 20px;
+    /* Space below the image */
+}
+
+/* Controls Styling */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    z-index: 1001;
+    column-gap: 36%;
+    /* Ensure controls are above the image */
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Close Button Styling */
+.close {
+    position: absolute;
+    top: -18px;
+    /* Space from the top */
+    right: 30.5%;
+    /* Space from the right */
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1001;
+    /* Ensure it's above all other elements */
+}
+
+/* Thumbnail Styling Below Carousel Image */
+.carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* Space below the main carousel image */
+}
+
+.carousel-smallImage {
+    border-radius: 10px;
+    width: 75px;
+    height: 75px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.carousel-smallImage:hover,
+.carousel-smallImage.active {
+    border-color: hsl(26, 100%, 55%);
+    /* Highlight on hover or active */
+    opacity: 0.75;
+}
+
+@media only screen and (max-width: 700px) {
+    .sneaker-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .left-sneaker {
+        display: flex;
+        justify-content: center;
+        width: 100%
+    }
+
+    .right-sneaker {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 0 20px;
+
+    }
+
+    #carousel {
+        display: block;
+    }
+}
